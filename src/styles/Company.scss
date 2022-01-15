@@ -1,0 +1,45 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+
+.companyContainer {
+  margin-top: 100px;
+  @include flex($justifyContent: space-around);
+}
+
+.infoAboutUs {
+  max-width: 400px;
+  padding-bottom: 20px;
+  @include for-phone-only {
+    max-width: 320px;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0px 15px;
+  }
+}
+
+.companyImages {
+  display: flex;
+  flex-direction: column;
+  & img:last-child {
+    margin-top: 35px;
+  }
+}
+
+.titleCompany {
+  @include title;
+  @include for-phone-only {
+    font-size: 45px;
+  }
+  @include for-tablet-portrait-up {
+    text-align: center;
+    margin-top: 60px;
+  }
+}
+
+.read {
+  @include main-button;
+  background-color: #fff;
+  & span {
+    padding-right: 15px;
+  }
+}

@@ -1,0 +1,113 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+
+.titleProjects {
+  @include title;
+  margin-top: 120px;
+  @include for-phone-only {
+    font-size: 45px;
+    margin-top: 20px;
+  }
+  @include for-tablet-portrait-up {
+    text-align: center;
+  }
+
+  @include for-desktop-up {
+    text-align: start;
+  }
+}
+
+.projectContainer {
+  @include flex($justifyContent: space-between);
+  margin-top: 60px;
+  @include for-tablet-portrait-up {
+    flex-direction: column;
+  }
+
+  @include for-desktop-up {
+    flex-direction: row;
+  }
+}
+
+.project-item {
+  margin: 15px 0px;
+  @include for-phone-only {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.with-overlay {
+  position: relative;
+
+  & a {
+    @include flex($justifyContent: start);
+    color: $text-white;
+    text-decoration: none;
+
+    & span {
+      font-size: 12px;
+      padding-right: 10px;
+    }
+  }
+
+  & span {
+    font-size: 60px;
+    display: block;
+    color: $text-white;
+    font-weight: bold;
+  }
+
+  @include for-phone-only {
+    span {
+      font-size: 30px;
+    }
+  }
+}
+
+.contentFirstItem {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  @include flex;
+}
+
+.prijectBtn {
+  @include flex($justifyContent: flex-end);
+  margin-top: 20px;
+  @include for-phone-only {
+    justify-content: center;
+  }
+
+  @include for-desktop-up {
+    justify-content: start;
+  }
+}
+
+.showAllProject {
+  @include main-button;
+  color: $text-white;
+  background-color: $main-text;
+
+  &:hover {
+    background-color: rgb(148, 145, 145);
+  }
+
+  & span {
+    padding-right: 5px;
+  }
+
+  @include for-tablet-portrait-up {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  @include for-desktop-up {
+    margin: 0px;
+    margin-top: 35px;
+  }
+}

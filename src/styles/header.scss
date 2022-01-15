@@ -1,21 +1,6 @@
 @import "./mixins.scss";
 @import "./colors.scss";
 
-ul {
-  @include flex($justifyContent: space-around);
-  font-size: 18px;
-
-  @include for-phone-only {
-    font-size: 14px;
-  }
-  margin: 0;
-  list-style: none;
-  a {
-    color: $main-text;
-    text-decoration: none;
-  }
-}
-
 header {
   background: white;
   margin: 0;

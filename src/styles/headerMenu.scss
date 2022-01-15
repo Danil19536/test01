@@ -1,0 +1,39 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+
+.headerMenu {
+  @include flex($justifyContent: space-between);
+  @include for-phone-only {
+    flex-flow: nowrap;
+    justify-content: space-around;
+  }
+}
+
+.menu {
+  @include flex($justifyContent: space-between);
+  @include for-phone-only {
+    a {
+      font-size: 7px;
+    }
+    li {
+      padding: 0px 5px;
+    }
+  }
+
+  & li {
+    list-style-type: none;
+    padding: 0px 15px;
+
+    & a {
+      text-decoration: none;
+      color: $main-text;
+      font-size: 12px;
+    }
+  }
+}
+
+.firstItemMenu {
+  padding: 3px 0px;
+  border-bottom: solid 1px $main-text;
+  border-top: solid 1px $main-text;
+}

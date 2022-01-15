@@ -1,26 +1,67 @@
 @mixin flex($flexFlow: row wrap, $justifyContent: center, $alignItems: center) {
-    display: flex;
-    flex-flow: $flexFlow;
-    justify-content: $justifyContent;
-    align-items: $alignItems;
+  display: flex;
+  flex-flow: $flexFlow;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin main-button {
+  border: none;
+  padding: 20px 45px;
+  @include flex;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover {
+    background-color: $main-hover;
+  }
+}
+
+@mixin forms {
+  margin: 0px 0px 16px 0px;
+  width: 340px;
+  height: 35px;
+  background-color: #f3f3f3;
+  border: none;
+  padding: 5px 15px;
+}
+
+@mixin tusks-text {
+  max-width: 280px;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+@mixin title {
+  font-size: 64px;
+  color: $text-title;
 }
 
 @mixin for-phone-only {
-    @media (max-width: 599px) { @content; }
+  @media (max-width: 599px) {
+    @content;
+  }
 }
 
 @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) { @content; }
+  @media (min-width: 600px) {
+    @content;
+  }
 }
 
 @mixin for-tablet-landscape-up {
-    @media (min-width: 900px) { @content; }
+  @media (min-width: 900px) {
+    @content;
+  }
 }
 
 @mixin for-desktop-up {
-    @media (min-width: 1200px) { @content; }
+  @media (min-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin for-big-desktop-up {
-    @media (min-width: 1800px) { @content; }
+  @media (min-width: 1800px) {
+    @content;
+  }
 }

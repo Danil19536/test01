@@ -1,22 +1,11 @@
-import { Link } from "react-router-dom";
-import { FaBeer } from "react-icons/fa";
-import { BsPersonCircle } from "react-icons/bs";
+import Headermenu from "./hedererMenu/HeaderMenu";
 
 const Header = () => {
   return (
     <header>
-      <ul>
-        <li>
-          <Link to={"/"}>
-            Home <FaBeer />{" "}
-          </Link>
-        </li>
-        <li>
-          <Link to="/about">
-            About <BsPersonCircle />{" "}
-          </Link>
-        </li>
-      </ul>
+      <div className="container">
+        <Headermenu />
+      </div>
     </header>
   );
 };

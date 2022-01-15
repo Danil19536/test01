@@ -1,0 +1,90 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+
+.projectHouse {
+  @include flex($justifyContent: space-between);
+  @include for-tablet-portrait-up {
+    justify-content: center;
+  }
+
+  @include for-desktop-up {
+    justify-content: space-between;
+  }
+}
+
+.title {
+  @include title;
+
+  & span {
+    display: block;
+    color: $main-text;
+  }
+  @include for-phone-only {
+    font-size: 45px;
+  }
+
+  @include for-tablet-portrait-up {
+    text-align: center;
+  }
+}
+
+.subTitle {
+  color: $text-title;
+  font-size: 24px;
+  margin-top: 120px;
+  padding-left: 8px;
+  & span {
+    padding: 0px 20px;
+    font-size: 26px;
+  }
+  @include for-tablet-portrait-up {
+    text-align: center;
+  }
+}
+
+.arrows {
+  display: flex;
+  justify-content: start;
+  margin-top: 115px;
+  @include for-tablet-portrait-up {
+    justify-content: center;
+  }
+}
+
+.show {
+  @include main-button;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $text-white;
+  cursor: pointer;
+
+  & span {
+    padding-right: 15px;
+  }
+}
+
+.arrow-left {
+  @include main-button;
+  padding: 17px;
+}
+
+.arrow-right {
+  @include main-button;
+  padding: 17px;
+}
+
+.house-item2 {
+  position: relative;
+  @include for-phone-only {
+    img {
+      width: 100%;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    img {
+      width: 100%;
+    }
+  }
+}

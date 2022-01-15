@@ -1,0 +1,118 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+
+.footerContainer {
+  background-color: $main-text;
+  margin-top: 120px;
+}
+
+.menuItem {
+  list-style-type: none;
+  padding: 15px;
+  & a {
+    text-decoration: none;
+    color: $text-white;
+  }
+}
+
+.footerTitle {
+  font-weight: bold;
+  color: #fff;
+  @include for-phone-only {
+    text-align: center;
+  }
+}
+
+.footerMenu {
+  padding: 0px;
+}
+
+.footerContent {
+  @include flex($alignItems: flex-start, $justifyContent: space-between);
+  padding: 60px 0px;
+  @include for-phone-only {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.adress {
+  @include flex($alignItems: baseline, $flexFlow: nowrap);
+  padding-top: 25px;
+  max-width: 287px;
+  line-height: 25px;
+  color: $text-white;
+  gap: 7px;
+  & span {
+    font-size: 15px;
+  }
+  & svg {
+    font-size: 20px;
+  }
+}
+
+.footerNumber {
+  @include flex($justifyContent: flex-start);
+  color: $text-white;
+  padding: 55px 0px;
+  & span {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  @include for-phone-only {
+    justify-content: center;
+  }
+}
+
+.footerMail {
+  @include flex($justifyContent: flex-start);
+  color: $text-white;
+  padding: 15px 0px;
+  & span {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  @include for-phone-only {
+    justify-content: center;
+  }
+}
+
+.socialImg {
+  @include flex;
+  color: $text-white;
+  padding: 30px 0px;
+}
+
+.icons {
+  font-size: 20px;
+  padding-right: 26px;
+  @include for-phone-only {
+    &:last-child {
+      padding: 0;
+    }
+  }
+}
+
+.line {
+  opacity: 0.1;
+  border: 1px solid #ffffff;
+}
+
+.footerDescr {
+  text-align: center;
+  font-size: 12px;
+  padding: 24px 0px;
+}
+
+.information {
+  @include for-phone-only {
+    padding-top: 45px;
+  }
+}
+
+.footerContact {
+  padding: 30px 0px;
+  @include for-tablet-portrait-up {
+    padding: 0px;
+  }
+}

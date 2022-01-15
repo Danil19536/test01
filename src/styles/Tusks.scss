@@ -1,0 +1,51 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+
+.tusksContainer {
+  @include flex($flexFlow: nowrap, $justifyContent: space-between);
+  margin-top: 60px;
+  @include for-phone-only {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+}
+
+.firstTusk {
+  @include flex($flexFlow: nowrap);
+  & p {
+    @include tusks-text;
+  }
+  @include for-phone-only {
+    padding-bottom: 15px;
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
+.secondTusk {
+  @include flex($flexFlow: nowrap);
+  & p {
+    @include tusks-text;
+    max-width: 400px;
+  }
+  @include for-phone-only {
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
+.TitleTusk {
+  font-size: 60px;
+  color: $text-title;
+  margin-top: 120px;
+  @include for-phone-only {
+    margin-top: 60px;
+    font-size: 34px;
+  }
+
+  @include for-desktop-up {
+    text-align: start;
+  }
+}
