@@ -48,6 +48,10 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="descr">
+        <div className="checkbox-wrapper">
+          <input id="test2" type="checkbox" />
+          <label htmlFor="test2"></label>
+        </div>
         Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
       </div>
       <div className="sendBtn">

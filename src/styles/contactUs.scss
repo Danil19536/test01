@@ -118,6 +118,7 @@
 }
 
 .descr {
+  @include flex($justifyContent: start);
   max-width: 356px;
   font-size: 14px;
   margin-top: 22px;

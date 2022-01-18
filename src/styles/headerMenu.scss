@@ -2,10 +2,17 @@
 @import "./colors.scss";
 
 .headerMenu {
+  position: relative;
   @include flex($justifyContent: space-between);
   @include for-phone-only {
     flex-flow: nowrap;
     justify-content: space-around;
+  }
+}
+
+.menuContainer {
+  @include for-phone-only {
+    display: none;
   }
 }
 
@@ -36,4 +43,39 @@
   padding: 3px 0px;
   border-bottom: solid 1px $main-text;
   border-top: solid 1px $main-text;
+}
+
+.mobileMenu {
+  display: none;
+
+  .mobileMenuList {
+    position: absolute;
+    box-shadow: 0 0 5px 1px lightgray;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-flow: column wrap;
+    background: white;
+    box-sizing: border-box;
+    padding: 5px;
+    &.open {
+      display: flex;
+    }
+  }
+
+  & li {
+    font-size: 10px;
+    list-style-type: none;
+    padding: 10px;
+  }
+
+  @include for-phone-only {
+    display: block;
+  }
+}
+
+.burger {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
